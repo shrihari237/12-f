@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <!-- We import arjs version without NFT but with marker + location based support -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+     <!-- Local StyleSheet -->
+     <link href="./style.css" rel="stylesheet" />
+
+    <script src="./addmarker.js"></script>
+    <script src="./button.js"></script>
+    <script src="./markerhandler.js"></script>
+
+
+
+
+  <script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyB9ztxWR8_ewvqYCDyj_GJc2lJPSVrPu-s",
+  authDomain: "ar-toy-store-284be.firebaseapp.com",
+  projectId: "ar-toy-store-284be",
+  storageBucket: "ar-toy-store-284be.appspot.com",
+  messagingSenderId: "938556390666",
+  appId: "1:938556390666:web:3e9f554412c20ea8f28ef3"
+};
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+  </script>
+
+
+</head>
+
+<body>
+  <a-scene vr-mode-ui="enabled: false" embedded
+    arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;" createbuttons>
+    <a-assets>
+
+    
+  <div id="button-div">
+
+    </div>
+  </a-scene>
+</body>
+
+</html>
